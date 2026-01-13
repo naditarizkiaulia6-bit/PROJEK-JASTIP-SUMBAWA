@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard Admin - Jastip Sumbawa</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+  --primary:#2563eb;
+  --soft:#eef2ff;
+  --text:#1f2937;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f4f6fb;
+  max-width:420px;
+  margin:auto;
+  padding-bottom:70px;
+}
+
+/* HEADER */
+.header{
+  background:white;
+  padding:16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+.header h2{
+  font-size:16px;
+}
+
+.profile{
+  background:var(--primary);
+  color:white;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* BANNER */
+.banner{
+  margin:16px;
+  background:linear-gradient(135deg,#2563eb,#3b82f6);
+  color:white;
+  padding:18px;
+  border-radius:18px;
+}
+
+.banner h3{
+  font-size:15px;
+}
+
+.banner p{
+  font-size:12px;
+  margin-top:6px;
+}
+
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin:16px;
+}
+
+.stat{
+  background:white;
+  padding:14px;
+  border-radius:14px;
+  box-shadow:0 6px 14px rgba(0,0,0,0.06);
+}
+
+.stat h4{
+  font-size:12px;
+  color:#555;
+}
+
+.stat strong{
+  font-size:18px;
+  color:var(--primary);
+}
+
+/* CARD */
+.card{
+  background:white;
+  margin:16px;
+  padding:14px;
+  border-radius:16px;
+  box-shadow:0 6px 14px rgba(0,0,0,0.06);
+}
+
+.card h4{
+  font-size:14px;
+  margin-bottom:10px;
+}
+
+/* LIST */
+.item{
+  border-bottom:1px solid #eee;
+  padding:10px 0;
+}
+
+.item:last-child{
+  border:none;
+}
+
+.item small{
+  color:#555;
+  font-size:12px;
+}
+
+/* STATUS */
+.status{
+  display:inline-block;
+  padding:4px 10px;
+  font-size:11px;
+  border-radius:12px;
+  color:white;
+}
+
+.wait{background:#f59e0b;}
+.active{background:#22c55e;}
+.reject{background:#ef4444;}
+
+/* BUTTON */
+.btn-group{
+  margin-top:6px;
+  display:flex;
+  gap:6px;
+}
+
+.btn{
+  flex:1;
+  font-size:11px;
+  padding:6px;
+  border:none;
+  border-radius:10px;
+  color:white;
+}
+
+.approve{background:#22c55e;}
+.decline{background:#ef4444;}
+.detail{background:#2563eb;}
+
+/* NAV */
+.nav{
+  position:fixed;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  max-width:420px;
+  width:100%;
+  background:white;
+  display:flex;
+  justify-content:space-around;
+  padding:10px 0;
+  box-shadow:0 -4px 10px rgba(0,0,0,0.08);
+}
+
+.nav i{
+  font-size:18px;
+  color:#777;
+}
+
+.nav .active{
+  color:var(--primary);
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <h2>Dashboard Admin</h2>
+  <div class="profile"><i class="fa fa-user-shield"></i></div>
+</div>
+
+<!-- BANNER -->
+<div class="banner">
+  <h3>Admin Jastip Sumbawa</h3>
+  <p>Kelola agen, user, dan transaksi</p>
+</div>
+
+<!-- STATISTIK -->
+<div class="stats">
+  <div class="stat">
+    <h4>Total User</h4>
+    <strong>124</strong>
+  </div>
+  <div class="stat">
+    <h4>Total Agen</h4>
+    <strong>18</strong>
+  </div>
+  <div class="stat">
+    <h4>Transaksi</h4>
+    <strong>86</strong>
+  </div>
+  <div class="stat">
+    <h4>Laporan</h4>
+    <strong>6</strong>
+  </div>
+</div>
+
+<!-- VERIFIKASI AGEN -->
+<div class="card">
+  <h4>Verifikasi Agen</h4>
+
+  <div class="item">
+    <strong>Agen Andi</strong><br>
+    <small>Sumbawa</small><br>
+    <span class="status wait">Menunggu</span>
+    <div class="btn-group">
+      <button class="btn approve">Terima</button>
+      <button class="btn decline">Tolak</button>
+    </div>
+  </div>
+
+  <div class="item">
+    <strong>Agen Rina</strong><br>
+    <small>Taliwang</small><br>
+    <span class="status active">Aktif</span>
+  </div>
+</div>
+
+<!-- MANAJEMEN USER -->
+<div class="card">
+  <h4>Manajemen User</h4>
+
+  <div class="item">
+    <strong>User Budi</strong><br>
+    <small>Aktif</small>
+    <div class="btn-group">
+      <button class="btn detail">Detail</button>
+      <button class="btn decline">Blokir</button>
+    </div>
+  </div>
+
+  <div class="item">
+    <strong>User Siti</strong><br>
+    <small>Aktif</small>
+  </div>
+</div>
+
+<!-- LAPORAN TRANSAKSI -->
+<div class="card">
+  <h4>Laporan Transaksi</h4>
+
+  <div class="item">
+    <strong>Snack Malaysia</strong><br>
+    <small>Rp 250.000</small><br>
+    <span class="status active">Selesai</span>
+  </div>
+
+  <div class="item">
+    <strong>Sepatu Branded</strong><br>
+    <small>Rp 1.200.000</small><br>
+    <span class="status wait">Diproses</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+  <i class="fa fa-home active"></i>
+  <i class="fa fa-users"></i>
+  <i class="fa fa-chart-line"></i>
+  <i class="fa fa-user"></i>
+</div>
+
+</body>
+</html>

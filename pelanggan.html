@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard | JASTIP SUMBAWA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+    --blue:#2563eb;
+    --soft:#eef3ff;
+    --text:#1f2937;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f6f9ff;
+    max-width:420px;
+    margin:auto;
+    min-height:100vh;
+    padding-bottom:95px;
+}
+
+/* HEADER */
+.header{
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+    color:white;
+    padding:22px 18px 60px;
+    border-radius:0 0 26px 26px;
+}
+
+.header h2{
+    font-size:21px;
+}
+
+.header p{
+    font-size:13px;
+    opacity:0.9;
+}
+
+/* CARD */
+.card{
+    background:white;
+    border-radius:18px;
+    padding:16px;
+    margin:12px 16px;
+    box-shadow:0 8px 18px rgba(0,0,0,0.07);
+}
+
+.card h3{
+    font-size:15px;
+    margin-bottom:10px;
+}
+
+/* PERMINTAAN */
+.request-item{
+    border-bottom:1px solid #eee;
+    padding:10px 0;
+}
+
+.request-item:last-child{
+    border:none;
+}
+
+.request-item p{
+    font-size:13px;
+    color:#555;
+}
+
+.btn{
+    display:inline-block;
+    background:var(--blue);
+    color:white;
+    padding:7px 14px;
+    border-radius:14px;
+    font-size:12px;
+    margin-top:6px;
+}
+
+/* AGEN */
+.agent{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:10px;
+}
+
+.agent-info{
+    font-size:13px;
+}
+
+.rating{
+    color:#facc15;
+    font-size:13px;
+}
+
+/* PEMBAYARAN */
+.payment{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.price{
+    font-weight:600;
+    color:var(--blue);
+}
+
+/* REVIEW */
+.review p{
+    font-size:13px;
+    color:#555;
+}
+
+.stars i{
+    color:#facc15;
+}
+
+/* NAV */
+.bottom-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    max-width:420px;
+    margin:auto;
+    background:white;
+    display:flex;
+    justify-content:space-around;
+    padding:12px 0;
+    border-radius:22px 22px 0 0;
+    box-shadow:0 -6px 20px rgba(0,0,0,0.1);
+}
+
+.bottom-nav i{
+    font-size:20px;
+    color:#9ca3af;
+}
+
+.bottom-nav .active{
+    color:var(--blue);
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <h2>Dashboard Jastip</h2>
+    <p>Kelola Titipan dengan Mudah</p>
+</div>
+
+<!-- PERMINTAAN TITIP -->
+<div class="card">
+    <h3>📦 Permintaan Titip</h3>
+    <div class="request-item">
+        <p>Snack Malaysia → Sumbawa</p>
+        <span class="btn">Detail</span>
+    </div>
+    <div class="request-item">
+        <p>Sepatu Branded → Empang</p>
+        <span class="btn">Detail</span>
+    </div>
+</div>
+
+<!-- PILIH AGEN -->
+<div class="card">
+    <h3>🧑‍✈️ Pilih Agen</h3>
+
+    <div class="agent">
+        <div class="agent-info">
+            Andi Jastip<br>
+            <span class="rating">⭐⭐⭐⭐☆</span>
+        </div>
+        <span class="btn">Pilih</span>
+    </div>
+
+    <div class="agent">
+        <div class="agent-info">
+            Rina Express<br>
+            <span class="rating">⭐⭐⭐⭐⭐</span>
+        </div>
+        <span class="btn">Pilih</span>
+    </div>
+</div>
+
+<!-- BAYAR -->
+<div class="card">
+    <h3>💳 Bayar Pemesanan</h3>
+    <div class="payment">
+        <span>Total</span>
+        <span class="price">Rp 150.000</span>
+    </div>
+    <span class="btn" style="margin-top:10px;display:inline-block;">Bayar Sekarang</span>
+</div>
+
+<!-- REVIEW -->
+<div class="card review">
+    <h3>⭐ Rating & Review</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+    </div>
+    <p>Pelayanan cepat dan aman. Barang sampai dengan baik.</p>
+</div>
+
+<!-- NAV -->
+<div class="bottom-nav">
+    <i class="fas fa-home active"></i>
+    <i class="fas fa-box"></i>
+    <i class="fas fa-credit-card"></i>
+    <i class="fas fa-user"></i>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Login - JASTIP SUMBAWA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+  --primary:#2563eb;
+  --text:#1f2937;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(180deg,#2563eb,#3b82f6);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.container{
+  background:white;
+  width:100%;
+  max-width:360px;
+  padding:26px;
+  border-radius:22px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.25);
+}
+
+/* LOGO */
+.logo{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.logo i{
+  font-size:42px;
+  color:var(--primary);
+}
+
+.logo h2{
+  margin:10px 0 4px;
+  font-size:20px;
+  color:var(--text);
+}
+
+.logo p{
+  font-size:12px;
+  color:#666;
+}
+
+/* FORM */
+label{
+  font-size:12px;
+  color:#555;
+}
+
+select,input{
+  width:100%;
+  padding:12px;
+  margin-top:6px;
+  margin-bottom:14px;
+  border-radius:12px;
+  border:1px solid #ddd;
+  font-size:13px;
+  outline:none;
+}
+
+select:focus,input:focus{
+  border-color:var(--primary);
+}
+
+/* BUTTON */
+button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:14px;
+  background:var(--primary);
+  color:white;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#1e4fd1;
+}
+
+/* EXTRA */
+.extra{
+  margin-top:16px;
+  display:flex;
+  justify-content:space-between;
+  font-size:12px;
+}
+
+.extra a{
+  text-decoration:none;
+  color:var(--primary);
+}
+
+.footer{
+  margin-top:18px;
+  text-align:center;
+  font-size:11px;
+  color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LOGO & JUDUL -->
+  <div class="logo">
+    <i class="fa fa-truck-fast"></i>
+    <h2>JASTIP SUMBAWA</h2>
+    <p>Login untuk melanjutkan</p>
+  </div>
+
+  <!-- FORM LOGIN -->
+  <label>Login Sebagai</label>
+  <select id="role">
+    <option value="">Pilih Role</option>
+    <option value="user">User</option>
+    <option value="agen">Agen</option>
+  </select>
+
+  <label>Email / Username</label>
+  <input type="text" id="username" placeholder="Masukkan email atau username">
+
+  <label>Password</label>
+  <input type="password" id="password" placeholder="Masukkan password">
+
+  <button onclick="login()">Login</button>
+
+  <!-- LINK -->
+  <div class="extra">
+    <a href="#">Lupa Password?</a>
+    <a href="#">Daftar</a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2025 JASTIP SUMBAWA
+  </div>
+
+</div>
+
+<script>
+function login(){
+  const role = document.getElementById("role").value;
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  if(role === "" || username === "" || password === ""){
+    alert("Lengkapi semua data!");
+    return;
+  }
+
+  // REDIRECT SESUAI ROLE
+  if(role === "agen"){
+    window.location.href = "dashboard-agen-jastip.html";
+  } else if(role === "user"){
+    window.location.href = "dashboard-user-jastip.html";
+  }
+}
+</script>
+<script src="js/auth.js"></script>
+</body>
+</html>

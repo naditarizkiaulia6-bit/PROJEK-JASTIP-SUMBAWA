@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard Jastip Sumbawa</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+  --primary:#2563eb;
+  --soft:#f1f5ff;
+  --text:#1f2937;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f5f7fb;
+  max-width:420px;
+  margin:auto;
+  padding-bottom:70px;
+}
+
+/* HEADER */
+.header{
+  background:white;
+  padding:16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+.header h2{
+  font-size:16px;
+}
+
+.profile{
+  background:var(--primary);
+  color:white;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* BANNER */
+.banner{
+  margin:16px;
+  background:linear-gradient(135deg,#2563eb,#3b82f6);
+  color:white;
+  padding:20px;
+  border-radius:18px;
+}
+
+.banner h3{
+  font-size:16px;
+}
+
+.banner p{
+  font-size:12px;
+  margin-top:6px;
+}
+
+/* STAT */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin:16px;
+}
+
+.stat-card{
+  background:white;
+  padding:14px;
+  border-radius:14px;
+  box-shadow:0 6px 14px rgba(0,0,0,0.06);
+}
+
+.stat-card h4{
+  font-size:12px;
+  color:#555;
+}
+
+.stat-card strong{
+  font-size:18px;
+  color:var(--primary);
+}
+
+/* LIST */
+.card{
+  background:white;
+  margin:16px;
+  padding:14px;
+  border-radius:16px;
+  box-shadow:0 6px 14px rgba(0,0,0,0.06);
+}
+
+.order{
+  border-bottom:1px solid #eee;
+  padding:10px 0;
+}
+
+.order:last-child{
+  border:none;
+}
+
+.order small{
+  color:#555;
+}
+
+.status{
+  display:inline-block;
+  padding:4px 10px;
+  font-size:11px;
+  border-radius:12px;
+  color:white;
+}
+
+.wait{background:#f59e0b;}
+.process{background:#2563eb;}
+.done{background:#22c55e;}
+
+/* BUTTON */
+.btn{
+  margin-top:8px;
+  font-size:11px;
+  padding:6px 12px;
+  border:none;
+  border-radius:10px;
+  background:var(--primary);
+  color:white;
+}
+
+/* BOTTOM NAV */
+.nav{
+  position:fixed;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  max-width:420px;
+  width:100%;
+  background:white;
+  display:flex;
+  justify-content:space-around;
+  padding:10px 0;
+  box-shadow:0 -4px 10px rgba(0,0,0,0.08);
+}
+
+.nav i{
+  font-size:18px;
+  color:#777;
+}
+
+.nav .active{
+  color:var(--primary);
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <h2>JASTIP SUMBAWA</h2>
+  <div class="profile"><i class="fa fa-user"></i></div>
+</div>
+
+<!-- BANNER -->
+<div class="banner">
+  <h3>Kelola Jastip Lebih Mudah</h3>
+  <p>Pantau permintaan, agen, dan transaksi</p>
+</div>
+
+<!-- STAT -->
+<div class="stats">
+  <div class="stat-card">
+    <h4>Permintaan</h4>
+    <strong>12</strong>
+  </div>
+  <div class="stat-card">
+    <h4>Transaksi</h4>
+    <strong>8</strong>
+  </div>
+</div>
+
+<!-- LIST ORDER -->
+<div class="card">
+  <h4>Daftar Permintaan</h4>
+
+  <div class="order">
+    <strong>Snack Malaysia</strong><br>
+    <small>Sumbawa</small><br>
+    <span class="status wait">Menunggu</span>
+    <button class="btn">Detail</button>
+  </div>
+
+  <div class="order">
+    <strong>Sepatu Branded</strong><br>
+    <small>Taliwang</small><br>
+    <span class="status process">Diproses</span>
+  </div>
+
+  <div class="order">
+    <strong>Kosmetik</strong><br>
+    <small>Empang</small><br>
+    <span class="status done">Selesai</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+  <i class="fa fa-home active"></i>
+  <i class="fa fa-list"></i>
+  <i class="fa fa-comments"></i>
+  <i class="fa fa-user"></i>
+</div>
+
+</body>
+</html>

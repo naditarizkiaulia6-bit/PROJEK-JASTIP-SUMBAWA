@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Chat Pelanggan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+  --primary:#2563eb;
+  --soft:#eef2ff;
+  --text:#1f2937;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f4f6fb;
+  max-width:420px;
+  margin:auto;
+}
+
+/* HEADER */
+.header{
+  background:white;
+  padding:14px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+.header i{
+  color:var(--primary);
+}
+
+.header h3{
+  font-size:14px;
+}
+
+.header small{
+  color:#16a34a;
+  font-size:11px;
+}
+
+/* CHAT AREA */
+.chat-box{
+  padding:14px;
+  height:calc(100vh - 130px);
+  overflow-y:auto;
+}
+
+/* MESSAGE */
+.msg{
+  max-width:75%;
+  margin-bottom:12px;
+  padding:10px 12px;
+  border-radius:14px;
+  font-size:12px;
+  line-height:1.4;
+}
+
+.user{
+  background:var(--primary);
+  color:white;
+  margin-left:auto;
+  border-bottom-right-radius:4px;
+}
+
+.agent{
+  background:white;
+  color:var(--text);
+  border-bottom-left-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* TIME */
+.time{
+  font-size:9px;
+  opacity:0.7;
+  margin-top:4px;
+  text-align:right;
+}
+
+/* INPUT */
+.input-area{
+  background:white;
+  padding:10px;
+  display:flex;
+  gap:8px;
+  border-top:1px solid #eee;
+}
+
+.input-area input{
+  flex:1;
+  padding:10px;
+  border-radius:14px;
+  border:1px solid #ddd;
+  font-size:12px;
+  outline:none;
+}
+
+.input-area button{
+  background:var(--primary);
+  border:none;
+  color:white;
+  padding:10px 14px;
+  border-radius:14px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <i class="fa fa-arrow-left"></i>
+  <div>
+    <h3>Pelanggan - Andi</h3>
+    <small>Online</small>
+  </div>
+</div>
+
+<!-- CHAT -->
+<div class="chat-box">
+
+  <div class="msg agent">
+    Halo kak, saya agen jastip Sumbawa 👋  
+    Pesanan kakak bisa saya bantu.
+    <div class="time">09:10</div>
+  </div>
+
+  <div class="msg user">
+    Halo kak, saya mau titip snack Malaysia ya
+    <div class="time">09:11</div>
+  </div>
+
+  <div class="msg agent">
+    Siap kak, mau jumlah berapa?
+    <div class="time">09:12</div>
+  </div>
+
+  <div class="msg user">
+    5 pcs ya kak
+    <div class="time">09:13</div>
+  </div>
+
+</div>
+
+<!-- INPUT -->
+<div class="input-area">
+  <input type="text" placeholder="Ketik pesan...">
+  <button><i class="fa fa-paper-plane"></i></button>
+</div>
+
+</body>
+</html>

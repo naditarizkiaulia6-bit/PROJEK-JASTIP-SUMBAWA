@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard User | JASTIP SUMBAWA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins,sans-serif;
+}
+body{
+  background:#f1f5f9;
+}
+
+/* HEADER */
+header{
+  background:#2563eb;
+  color:#fff;
+  padding:16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header h2{
+  font-size:16px;
+}
+header button{
+  background:#ef4444;
+  border:none;
+  color:white;
+  padding:8px 12px;
+  border-radius:10px;
+  font-size:12px;
+}
+
+/* CARD */
+.container{
+  padding:16px;
+}
+.card{
+  background:white;
+  border-radius:16px;
+  padding:16px;
+  margin-bottom:14px;
+  box-shadow:0 6px 16px rgba(0,0,0,0.08);
+}
+.card h3{
+  font-size:14px;
+  margin-bottom:6px;
+}
+.card p{
+  font-size:12px;
+  color:#555;
+}
+
+/* BUTTON */
+.card button{
+  margin-top:10px;
+  background:#2563eb;
+  color:white;
+  border:none;
+  padding:10px;
+  width:100%;
+  border-radius:12px;
+  font-size:13px;
+}
+
+/* STATUS */
+.status{
+  font-size:11px;
+  margin-top:6px;
+  color:#16a34a;
+}
+
+/* BOTTOM NAV */
+nav{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background:white;
+  border-top:1px solid #ddd;
+  display:flex;
+  justify-content:space-around;
+  padding:10px 0;
+}
+nav a{
+  text-decoration:none;
+  color:#555;
+  font-size:11px;
+  text-align:center;
+}
+nav i{
+  display:block;
+  font-size:16px;
+  margin-bottom:4px;
+}
+.active{
+  color:#2563eb;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <h2>Dashboard User</h2>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<!-- CONTENT -->
+<div class="container">
+
+  <!-- PERMINTAAN TITIP -->
+  <div class="card">
+    <h3><i class="fa fa-box"></i> Permintaan Titip</h3>
+    <p>Buat permintaan barang yang ingin dititipkan</p>
+    <button>Buat Permintaan</button>
+  </div>
+
+  <!-- PILIH AGEN -->
+  <div class="card">
+    <h3><i class="fa fa-user-check"></i> Pilih Agen</h3>
+    <p>Pilih agen yang tersedia di lokasi tujuan</p>
+    <button>Lihat Agen</button>
+  </div>
+
+  <!-- PEMBAYARAN -->
+  <div class="card">
+    <h3><i class="fa fa-credit-card"></i> Pembayaran</h3>
+    <p>Bayar pesanan jastip kamu</p>
+    <span class="status">Status: Menunggu Pembayaran</span>
+    <button>Bayar Sekarang</button>
+  </div>
+
+  <!-- RATING -->
+  <div class="card">
+    <h3><i class="fa fa-star"></i> Rating & Review</h3>
+    <p>Beri penilaian untuk agen</p>
+    <button>Beri Rating</button>
+  </div>
+
+</div>
+
+<!-- BOTTOM NAV -->
+<nav>
+  <a href="#" class="active">
+    <i class="fa fa-home"></i>
+    Home
+  </a>
+  <a href="#">
+    <i class="fa fa-box"></i>
+    Pesanan
+  </a>
+  <a href="#">
+    <i class="fa fa-comments"></i>
+    Chat
+  </a>
+  <a href="#">
+    <i class="fa fa-user"></i>
+    Profil
+  </a>
+</nav>
+
+<!-- AUTH -->
+<script src="js/auth.js"></script>
+<script>
+  protectPage("user");
+</script>
+
+</body>
+</html>
+<script src="js/auth.js"></script>
+<script>
+  protectPage("user");
+</script>
